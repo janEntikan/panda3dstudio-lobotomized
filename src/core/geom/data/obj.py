@@ -1,4 +1,4 @@
-from ...base import *
+from ...basis import *
 from .select import SelectionMixin
 from .transform import GeomTransformMixin
 from .history import HistoryMixin

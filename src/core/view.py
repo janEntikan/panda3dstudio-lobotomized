@@ -1,4 +1,4 @@
-from .base import *
+from .basis import *
 from direct.interval.IntervalGlobal import (LerpPosInterval, LerpQuatInterval,
     LerpScaleInterval, LerpQuatScaleInterval, Parallel)
 

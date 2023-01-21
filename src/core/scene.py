@@ -1,4 +1,4 @@
-from .base import *
+from .basis import *
 
 
 FILE_VERSION = "1.1.0"

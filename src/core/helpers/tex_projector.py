@@ -1,4 +1,4 @@
-from ..base import *
+from ..basis import *
 from panda3d.fx import ProjectionScreen
 from math import pi, sin, cos
 

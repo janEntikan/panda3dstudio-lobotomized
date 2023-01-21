@@ -1,4 +1,4 @@
-from .base import *
+from .basis import *
 
 
 class MainCamera:
@@ -511,7 +511,7 @@ class PickingCamera:
         return task.cont if task else None
 
     def update_pixel_under_mouse(self):
-        """ 
+        """
         Force this camera to immediately determine the color of the pixel currently
         under the mouse cursor.
 

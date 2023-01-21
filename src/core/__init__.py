@@ -1,14 +1,14 @@
-from .base import *
-from .base.base import _PendingTask
+from .basis import *
+from .basis.basis import _PendingTask
+
 from . import (cam, nav, view, history, scene, import_, export, create, select, transform,
                transf_center, coord_sys, geom, hierarchy, helpers, texmap, material, snap, align)
 
 
 class Core:
 
-    def __init__(self, app_mgr, verbose=False):
+    def __init__(self, verbose=False):
 
-        self._app_mgr = app_mgr
         self._verbose = verbose
         KeyEventListener.init_event_ids()
         self._listeners = {"main": KeyEventListener()}
@@ -22,20 +22,11 @@ class Core:
 
             return task.cont
 
-        GD.showbase.task_mgr.add(handle_pending_tasks, "handle_pending_tasks", sort=48)
+        base.task_mgr.add(handle_pending_tasks, "handle_pending_tasks", sort=48)
 
     def setup(self):
-
-        self._listeners["main"].set_mouse_watcher(GD.mouse_watcher)
-
-        Mgr.init(self, self._app_mgr, self._gizmo_root, PickingColorIDManager, self._verbose)
-        _PendingTask.init(self.do_gradually)
-
+        self._listeners["main"].set_mouse_watcher(base.mouseWatcherNode)
         GD.set_default("active_interface", "main")
-        GD.set_default("open_file", "")
-        GD.set_default("shift_down", False)
-        GD.set_default("ctrl_down", False)
-        GD.set_default("alt_down", False)
         GD.set_default("long_process_running", False)
         GD.set_default("progress_steps", 0)
 

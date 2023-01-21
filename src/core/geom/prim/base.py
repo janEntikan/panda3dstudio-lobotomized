@@ -1,4 +1,4 @@
-from ...base import *
+from ...basis import *
 from ..locked_geom import create_aux_geom, LockedGeomBase, LockedGeomManagerBase
 import array
 

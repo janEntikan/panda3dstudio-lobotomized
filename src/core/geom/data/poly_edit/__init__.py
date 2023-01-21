@@ -1,4 +1,4 @@
-from ....base import *
+from ....basis import *
 from .create import CreationMixin, CreationManager
 from .triangulate import TriangulationMixin, TriangulationManager
 from .smooth import SmoothingMixin, SmoothingManager, SmoothingGroup

@@ -1,4 +1,4 @@
-from .base import *
+from .basis import *
 
 COMPRESSION = 9
 

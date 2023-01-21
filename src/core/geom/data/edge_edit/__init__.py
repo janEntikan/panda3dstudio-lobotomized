@@ -1,4 +1,4 @@
-from ....base import *
+from ....basis import *
 from .merge import EdgeMergeMixin, EdgeMergeManager
 from .bridge import EdgeBridgeMixin, EdgeBridgeManager
 import copy

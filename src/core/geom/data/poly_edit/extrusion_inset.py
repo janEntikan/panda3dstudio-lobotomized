@@ -1,4 +1,4 @@
-from ....base import *
+from ....basis import *
 from math import sin, cos, acos
 
 
@@ -932,7 +932,7 @@ class ExtrusionInsetMixin:
                     if diff:
                         # use the merged vertex currently associated with the vert(s) left
                         # behind after extrusion/inset
-                        start_mv1 = merged_verts[diff.pop()] 
+                        start_mv1 = merged_verts[diff.pop()]
                     elif extr_mv1.id in start_verts:
                         # use the merged vertex previously created for a different start
                         # vertex at the same position
@@ -948,7 +948,7 @@ class ExtrusionInsetMixin:
 
                     # the second of the 4 counter-clockwise ordered merged vertices
                     if diff:
-                        start_mv2 = merged_verts[diff.pop()] 
+                        start_mv2 = merged_verts[diff.pop()]
                     elif extr_mv2.id in start_verts:
                         start_mv2 = start_verts[extr_mv2.id]
                     else:

@@ -1,4 +1,4 @@
-from ..base import *
+from ..basis import *
 from . import catmull_clark
 import random
 import array

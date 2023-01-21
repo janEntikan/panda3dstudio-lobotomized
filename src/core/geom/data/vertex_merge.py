@@ -1,4 +1,4 @@
-from ...base import *
+from ...basis import *
 
 
 class VertexMerger:
@@ -82,7 +82,7 @@ class VertexMerger:
         for row2, row1 in list(self.dupes.items()):
             self.dupes[row2] = self.rows.index(row1)
 
-    def __create_geom_primitive(self, return_row_change): 
+    def __create_geom_primitive(self, return_row_change):
 
         prim_src = self.geom.get_primitive(0)
         self.prim_dest = prim_dest = GeomTriangles(Geom.UH_static)
